@@ -2,15 +2,88 @@
 <head>
     <title>Adote um pet</title>
     <link rel='stylesheet' type='text/css' href='style.css'>
-    <script src='script.js'></script>
 </head>
 
 <body>
-<h2>isabel</h2>
-    <form action="#">
-        <div class='contato'>
-            <label for="nome-contato">Nome</label>
-            <input type="text" id='nome-contato'>
+
+<div class='content'>
+    <div class='header'>
+        <div id='header-image'>
+            <img src="img/img-default.png" id='img' alt="Foto do pet">
         </div>
+        <div id='header-description'>
+            <h2>
+                ANIMAIS UNIVERSITÁRIOS
+            </h2>
+            <p>
+                O projeto "Animais Universitários" é um trabalho voluntário que dá assistência a animais em estado de vulnerabilidade no Campus do Pici. 
+                Ainda não temos abrigo, mas resolvemos disponibilizar esse formulário para cadastrarmos todos os bichinhos que estão abandonados nessas redondezas. 
+                Os PETs sofrem muito mais o abandono nesse momento de pandemia e, por isso, todos os animais cadastrados serão divulgados no nosso Instagram (@animaisuniversitarios) 
+                para que possam ser adotados e finalmente ter um lar
+            </p>
+        </div>
+        <div id='img-button'>
+            <button onclick='clickFile()'>
+                <img id='img-button' src="img/camera.png" width='24px'>
+                <span>Enviar foto do pet</span>
+            </button>
+            <input 
+                style='display: none;'
+                id='pet-img' 
+                type="file" 
+                multiple 
+                accept=".jpg,.gif,.png"
+                onchange="preview()">
+        </div>
+    </div>
+
+    <div id='pet-form'>
+        <h2>SOBRE O PET</h2>
+        <form action="#">
+            <div class='campo petNome'>
+                <label for="nome-contato">Nome: </label>
+                <input type="text" id='nome-contato'>
+            </div>
+            
+            <div class='campo petIdade'>
+                <label for="idade-contato">Idade: </label>
+                <input type="number" id='idade-contato'>
+            </div>
+    
+            <div class='campo petCategoria'>
+                <label for="pet-categoria">Categoria: </label>
+                <select id="pet-categoria">
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                </select>
+            </div>
+    
+            <div class='campo petRaca'>
+                <label for="pet-raca">Raca: </label>
+                <input type="text" id='pet-raca'>
+            </div>
+            
+            <div class='campo petPeso'>
+                <label for="pet-peso">Peso: </label>
+                <input type="number" id='pet-peso'>
+            </div>
+
+            <div class='campo petTamanho'>
+                <label for="pet-tamanho">Tamanho: </label>
+                <select id="pet-tamanho">
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+    
+            <div class='campo petDescricao'>
+                <label for="pet-descricao">Descrição: </label>
+                <textarea id="pet-descricao" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+<script src='script.js'></script>
 </body>
 </html>
