@@ -3,6 +3,11 @@
      src: url('fonts/PatuaOne.ttf');
 }
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-image: url(img/bg-1.png),url(img/bg-3.png);
     background-position: left, right top;
@@ -23,23 +28,23 @@ body {
 	/* fim da sombra */
 }
 
-#header-image {
+.header-image {
     float: left;
     margin-right: 30px;
 }
 
-#header-description {
+.header-description {
     text-align: right;
 }
 
-#header-description h2 {
+.header-description h2 {
     font-family: PatuaOne;
     margin: 0;
     font-size: 35px;
     color: #5f5643;
 }
 
-#header-description p {
+.header-description p {
     text-align: justify;
     margin-top: 10px;
     font-family: PatuaOne;
@@ -48,7 +53,13 @@ body {
 }
 
 
-
+footer{
+    background-color: #ffcc86;
+    padding: 20px 0px;
+    text-align: center;
+    font-family: PatuaOne;
+    font-size: 15px;
+}
 
 
 

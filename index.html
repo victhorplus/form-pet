@@ -41,53 +41,85 @@
         </div>
     </div>
 
-    <div id='pet-info'>
-        <h2>SOBRE O PET</h2>
-        <form name='pet-form'>
+        
+    <form name='form'>
+        <div class='pet-form'>
+            <h2>SOBRE O PET</h2>
             <div class='campo petNome'>
                 <label for="input-pet-nome">Nome: </label>
-                <input type="text" id='input-pet-nome'>
+                <input type="text" id='input-pet-nome' required placeholder='Digite o nome do pet'>
             </div>
             
             <div class='campo petIdade'>
                 <label for="input-pet-idade">Idade: </label>
-                <input type="number" id='input-pet-idade'>
+                <input type="number" id='input-pet-idade' placeholder='Idade do pet'>
             </div>
     
             <div class='campo petCategoria'>
                 <label for="input-pet-categoria">Categoria: </label>
-                <select id="input-pet-categoria">
+                <select id="input-pet-categoria" required >
+                    <option value="0" selected>Selecione a categoria</option>
                     <option value="cachorro">Cachorro</option>
                     <option value="gato">Gato</option>
                 </select>
             </div>
     
             <div class='campo petRaca'>
-                <label for="input-pet-raca">Raca: </label>
-                <input type="text" id='input-pet-raca'>
+                <label for="input-pet-raca">Raça: </label>
+                <input type="text" id='input-pet-raca' placeholder="Digite a raça do pet">
             </div>
             
-            <div class='campo petPeso'>
-                <label for="input-pet-peso">Peso: </label>
-                <input type="number" id='input-pet-peso'>
-            </div>
-
             <div class='campo petTamanho'>
                 <label for="input-pet-tamanho">Tamanho: </label>
-                <select id="input-pet-tamanho">
+                <select id="input-pet-tamanho" required >
+                    <option value="0" selected>Selecione o tamanho</option>
                     <option value="pequeno">Pequeno</option>
                     <option value="medio">Médio</option>
                     <option value="grande">Grande</option>
                 </select>
             </div>
+
+            <div class='campo petPeso'>
+                <label for="input-pet-peso">Peso: </label>
+                <input type="number" id='input-pet-peso' placeholder="Digite o peso do pet">
+            </div>
     
             <div class='campo petDescricao'>
                 <label for="input-pet-descricao">Descrição: </label>
-                <textarea id="input-pet-descricao" cols="30" rows="10"></textarea>
+                <textarea 
+                    id="input-pet-descricao" 
+                    cols="30" rows="10" required 
+                    placeholder='Descreva o pet, sua personalidade, se é castrado, se possui alguma doença etc'></textarea>
             </div>
-        </form>
-    </div>
+        </div>
+        
+        <div class='contato-form'>
+            <h2>Contato</h2>
+            <div class='campo contatoNome'>
+                <label for="input-contato-name">Nome: </label>
+                <input type="text" id='input-contato-name' required name='input-contato-name' placeholder="Digite seu nome">
+            </div>
+
+            <div class='campo contatoTelefone'>
+                <label for="input-contato-telefone">Telefone: </label>
+                <input type="number" id='input-contato-telefone' required name='input-contato-telefone' placeholder="(85)9 9999-9999">
+            </div>
+
+            <div class='campo contatoEmail'>
+                <label for="input-contato-email">Email</label>
+                <input type="mail" id='input-contato-email' required name='input-contato-email' placeholder="example@example.com">
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!form.form.valid">
+            Enviar
+        </button>
+    </form>
 </div>
+
+<footer>
+    Desenvolvido por Isabel Cristina, Luiza Clara e Victhor Hugo
+</footer>
 <script src='script.js'></script>
 </body>
 </html>
