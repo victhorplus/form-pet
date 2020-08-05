@@ -1,3 +1,8 @@
+@font-face {
+     font-family: PatuaOne;
+     src: url('fonts/PatuaOne.ttf');
+}
+
 body {
     background-image: url(img/bg-1.png),url(img/bg-3.png);
     background-position: left, right top;
