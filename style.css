@@ -10,3 +10,53 @@ body {
 	background-color: #fbe6d4;
 	background-attachment: fixed, fixed;
 }
+
+.content {
+    margin: 6% auto;
+    width: 54%;
+    background: #fff6ef;
+    padding: 6%;
+	/* sombras */
+	-webkit-box-shadow: 0px 0px 25px -1px rgba(185,172,146,0.55);
+	-moz-box-shadow: 0px 0px 25px -1px rgba(185,172,146,0.55);
+	box-shadow: 0px 0px 25px -1px rgba(185,172,146,0.55);
+	/* fim da sombra */
+}
+
+#header-image {
+    float: left;
+    margin-right: 30px;
+}
+
+#header-description {
+    text-align: right;
+}
+
+#header-description h2 {
+    font-family: PatuaOne;
+    margin: 0;
+    font-size: 35px;
+    color: #5f5643;
+}
+
+#header-description p {
+    text-align: justify;
+    margin-top: 10px;
+    font-family: PatuaOne;
+    font-size: 12px;
+	color: #5f5643;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
