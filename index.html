@@ -8,11 +8,12 @@
 <body>
 
 <div class='content'>
-    <div class='header'>
-        <div id='header-image'>
-            <img src="img/img-default.png" id='img' alt="Foto do pet">
+    <div class='header-content'>
+        <div class='header-image'>
+            <img src="img/img-default.png" id='pet-img' alt="Foto do pet">
         </div>
-        <div id='header-description'>
+
+        <div class='header-description'>
             <h2>
                 ANIMAIS UNIVERSITÁRIOS
             </h2>
@@ -23,55 +24,55 @@
                 para que possam ser adotados e finalmente ter um lar
             </p>
         </div>
-        <div id='img-button'>
+
+        <div class='custom-button'>
             <button onclick='clickFile()'>
-                <img id='img-button' src="img/camera.png" width='24px'>
+                <img id='button-img' src="img/camera-icon.png">
                 <span>Enviar foto do pet</span>
             </button>
             <input 
                 style='display: none;'
-                id='pet-img' 
-                type="file" 
-                multiple 
+                id='input-pet-image' 
+                type="file"
                 accept=".jpg,.gif,.png"
                 onchange="preview()">
         </div>
     </div>
 
-    <div id='pet-form'>
+    <div id='pet-info'>
         <h2>SOBRE O PET</h2>
-        <form action="#">
+        <form name='pet-form'>
             <div class='campo petNome'>
-                <label for="nome-contato">Nome: </label>
-                <input type="text" id='nome-contato'>
+                <label for="input-pet-nome">Nome: </label>
+                <input type="text" id='input-pet-nome'>
             </div>
             
             <div class='campo petIdade'>
-                <label for="idade-contato">Idade: </label>
-                <input type="number" id='idade-contato'>
+                <label for="input-pet-idade">Idade: </label>
+                <input type="number" id='input-pet-idade'>
             </div>
     
             <div class='campo petCategoria'>
-                <label for="pet-categoria">Categoria: </label>
-                <select id="pet-categoria">
+                <label for="input-pet-categoria">Categoria: </label>
+                <select id="input-pet-categoria">
                     <option value="cachorro">Cachorro</option>
                     <option value="gato">Gato</option>
                 </select>
             </div>
     
             <div class='campo petRaca'>
-                <label for="pet-raca">Raca: </label>
-                <input type="text" id='pet-raca'>
+                <label for="input-pet-raca">Raca: </label>
+                <input type="text" id='input-pet-raca'>
             </div>
             
             <div class='campo petPeso'>
-                <label for="pet-peso">Peso: </label>
-                <input type="number" id='pet-peso'>
+                <label for="input-pet-peso">Peso: </label>
+                <input type="number" id='input-pet-peso'>
             </div>
 
             <div class='campo petTamanho'>
-                <label for="pet-tamanho">Tamanho: </label>
-                <select id="pet-tamanho">
+                <label for="input-pet-tamanho">Tamanho: </label>
+                <select id="input-pet-tamanho">
                     <option value="pequeno">Pequeno</option>
                     <option value="medio">Médio</option>
                     <option value="grande">Grande</option>
@@ -79,8 +80,8 @@
             </div>
     
             <div class='campo petDescricao'>
-                <label for="pet-descricao">Descrição: </label>
-                <textarea id="pet-descricao" cols="30" rows="10"></textarea>
+                <label for="input-pet-descricao">Descrição: </label>
+                <textarea id="input-pet-descricao" cols="30" rows="10"></textarea>
             </div>
         </form>
     </div>

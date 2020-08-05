@@ -1,6 +1,6 @@
 function preview(){
-    var file = document.getElementById('pet-img').files[0];
-    var img = document.getElementById('img');
+    var file = document.getElementById('input-pet-image').files[0];
+    var img = document.getElementById('pet-img');
     var reader = new FileReader();
 
     reader.readAsDataURL(file);
@@ -10,6 +10,6 @@ function preview(){
 }
 
 function clickFile(){
-    var fileInput = document.getElementById('pet-img')
+    var fileInput = document.getElementById('input-pet-image')
     fileInput.click()
 }
