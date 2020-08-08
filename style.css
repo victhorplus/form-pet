@@ -112,6 +112,32 @@ form[name="form-cadastro"] button {
     margin-bottom: 34px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border: #b9ac92 solid 1px;
+  -webkit-text-fill-color: #5f5643;
+  -webkit-box-shadow: 0 0 0px 1000px #edd3be inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#input-pet-descricao {
+    width: calc(100% - 118.11px) !important;
+    height: 70px;
+    margin: 0;
+}
+
+.petDescricao label {
+    float: left;
+	padding-right: 9px;
+}
+
 .pet-form input, .contato-form input, select, textarea {
     background: #fbe6d4;
     padding: 9px;
