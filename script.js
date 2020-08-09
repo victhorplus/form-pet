@@ -15,9 +15,9 @@ function send(){
     }
 
     contato = {
-        nome: document.forms['form-cadastro']['input-contato-nome'].value,
-        telefone: document.forms['form-cadastro']['input-contato-telefone'].value,
-        email: document.forms['form-cadastro']['input-contato-email'].value
+        nome: document.getElementById('input-contato-nome').value,
+        telefone: document.getElementById('input-contato-telefone').value,
+        email: document.getElementById('input-contato-email').value
     }
 
     if(validaDados()){
@@ -135,18 +135,6 @@ function clickFile(){
     var fileInput = document.getElementById('input-pet-image')
     fileInput.click()
 }
-
-function preencher(){
-    document.getElementById('input-pet-nome').value = 'lupo'
-    document.getElementById('input-pet-idade').value = '2'
-    document.getElementById('input-pet-raca').value = 'puddle'
-    document.getElementById('input-pet-peso').value = '2'
-    document.getElementById('input-pet-descricao').value = 'Fofo e carinhoso'
-    document.forms['form-cadastro']['input-contato-nome'].value = 'victhor'
-    document.forms['form-cadastro']['input-contato-telefone'].value = '85989715291'
-    document.forms['form-cadastro']['input-contato-email'].value = 'victhor@hotmail.com'
-};
-preencher();
 
 function clearForm(){
     document.getElementById('input-pet-nome').value = ''
