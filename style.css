@@ -89,6 +89,7 @@ h2 {
     font-family: PatuaOne;
     font-size: 30px;
     color: #5f5643;
+	margin-bottom: 21px;
 }
 
 label {
@@ -210,6 +211,8 @@ select:-webkit-autofill:focus {
 	text-transform: uppercase;
 	color: #c8bba1;
 }
+
+
 
 .pet-form, .contato-form {
     display: flex;
@@ -334,21 +337,24 @@ footer{
     position: fixed;
     top: 0px;
     background: rgba(0,0,0, 0.6);
-}
-#popup .content{
-    width: 45%;
-    margin-top: 3%;
+	
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-#popup .content button{
+#popup .janela button {
     position: relative;
     float: right;
-    top: -30px;
+    top: -35px;
+    left: 35px;
     cursor: pointer;
 }
 
 #popup.hidden{
-    visibility: hidden;
+    visibility: visible;
 }
 
 #popup.show{
@@ -357,6 +363,7 @@ footer{
 
 
 .janela {
+
     margin: 0 auto;
     background: #fff6ef;
     width: 40%;
