@@ -18,9 +18,6 @@ function send(){
     }
 
     validaDados(cadastro);
-
-    // Armazena a variável cadastro no localStorage do navegador
-    localStorage.setItem(localStorage.length, JSON.stringify(cadastro));
 }
 
 function validaDados(obj){
@@ -126,4 +123,3 @@ var cad3 = {
     telefone: '85989715291',
     email: 'victhor@hotmail.com'
 }
-//localStorage.setItem('0', JSON.stringify(cad1))

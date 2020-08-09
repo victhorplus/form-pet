@@ -131,44 +131,29 @@
         </button>
     </form>
 </div>
-<button onclick='change()'>
-    open/close
-</button>
-<div id = 'teste' class='fechada'>
-<ul>
-    <li>OI</li>
-    <li>OI</li>
-    <li>OI</li>
-    <li>OI</li>
-    <li>OI</li>
-</ul>
-<style>
-    #teste{
-        background-color: #ccc;
-        overflow: hidden;
-    }
-    #teste ul{
-    }
-    #teste.aberta{
-        height: 100px;
-        transition: 0.5s;
-    }
-    #teste.fechada{
-        height: 0px;
-        transition: 0.5s;
-    }
-</style>
-<script>
-    function change(){
-        var div = document.getElementById('teste');
-        if(div.className == "aberta"){
-            div.className = "fechada"
-        }else{
-            div.className = "aberta"
-        }
-    }
-</script>
+
+<div id='pop-up' class='hidden'>
+    <div class='content'>
+        <div class='img-pet'>
+            <img id='img-pet'>
+        </div>
+        <div class='info'>
+            <div class='info-pet'>
+                <div class='info-pet-header'>
+                    <h2>Cadastro realizado com sucesso!</h2>
+                    <p>O PET está pronto para ter um lar</p>
+                </div>
+                <div class='info-pet-body'></div>
+            </div>
+
+            <div class='info-contato'>
+                <h2>Para mais informações</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
 </div>
+
 <footer>
     Desenvolvido por Isabel Cristina, Luiza Clara e Victhor Hugo
 </footer>
