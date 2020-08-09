@@ -1,4 +1,3 @@
-var lista_pet = getStorage() || [];
 var pet = {};
 var contato = {};
 
@@ -16,18 +15,20 @@ function send(){
     }
 
     contato = {
-        nome: document.forms['form-cadastro']['input-contato-nome'].value,
-        telefone: document.forms['form-cadastro']['input-contato-telefone'].value,
-        email: document.forms['form-cadastro']['input-contato-email'].value
+        nome: document.getElementById('input-contato-nome').value,
+        telefone: document.getElementById('input-contato-telefone').value,
+        email: document.getElementById('input-contato-email').value
     }
 
-    if(validaDados())
+    if(validaDados()){
         popup();
+        clearForm();
+    }
 }
 
 function validaDados(){
     if(
-        pet.categoria === undefined ||
+        (pet.categoria === undefined && pet.categoria != null && pet.categoria != '') ||
         pet.tamanho === undefined ||
         pet.coleira === undefined ||
         pet.descricao === undefined ||
@@ -43,13 +44,58 @@ function validaDados(){
 
 function popup(){
     var ul_pet = document.createElement('ul');
+    var ul_contato = document.createElement('ul');
     var li_pet = []
+    var li_contato = []
+
+    // Laço para preenchimento dos dados de cadastro do PET no popup
     for(let att in pet){
-        if(pet[att] != ''){
-            let li = document.createElement('li')
-            li_pet.push(document.createElement('li'))
+        // Cria LI com propriedades que contém valor e ignora o resto
+        if(pet[att] != '' && att !='imagem'){
+            // Formatando para <label class='prop'>Propriedade: </label> <span>valor</span>
+            let str = att[0].toUpperCase() + att.slice(1) + ': ';
+            let label = document.createElement('label');
+            label.innerHTML = str;
+            label.className = 'prop';
+            let span = document.createElement('span');
+            span.innerHTML = pet[att];
+            let li = document.createElement('li');
+            li.appendChild(label);
+            li.appendChild(span);
+            li_pet.push(li);
         }
     }
+    for(let li of li_pet){
+        ul_pet.appendChild(li);
+    }
+    
+    // Laço para preenchimento dos dados de cadastro do CONTATO no popup
+    for(let att in contato){
+        // Cria LI com propriedades que contém valor e ignora o resto
+        if(contato[att] != ''){
+            // Formatando para <label class='prop'>Propriedade: </label> <span>valor</span>
+            let str = att[0].toUpperCase() + att.slice(1) + ': ';
+            let label = document.createElement('label');
+            label.innerHTML = str;
+            label.className = 'prop';
+            let span = document.createElement('span');
+            span.innerHTML = contato[att];
+            let li = document.createElement('li');
+            li.appendChild(label);
+            li.appendChild(span);
+            li_contato.push(li);
+        }
+    }
+    for(li of li_contato){
+        ul_contato.appendChild(li);
+    }
+
+    // Adiciona as ULs criadas nas respectivas DIVs
+    document.getElementById('img-pet').src = pet.imagem
+    document.getElementsByClassName('info-pet-body')[0].appendChild(ul_pet)
+    document.getElementsByClassName('info-contato')[0].appendChild(ul_contato)
+    openClose();
+    return;
 }
 
 function erro(error){
@@ -71,9 +117,18 @@ function preview(){
     }
     reader.readAsDataURL(file);
     reader.onloadend = ()=>{
-        img.src = reader.result
-        cad1.image = reader.result;
+        img.src = reader.result;
     }
+}
+
+function openClose(){
+    var popup = document.getElementById('popup');
+    if(popup.className == 'hidden'){
+        popup.className = 'show';
+        return;
+    }
+    popup.className = 'hidden';
+    clearPopup();
 }
 
 function clickFile(){
@@ -81,47 +136,23 @@ function clickFile(){
     fileInput.click()
 }
 
-
-
-
-// Lógica para armazenar e mostrar pets cadastrados
-
-var cad1 = {
-    nome: "lupo",
-    idade: 3,
-    categoria: 'cachorro',
-    raca: 'puddle',
-    tamanho: 'pequeno',
-    peso: '2kg',
-    coleira: '#fff',
-    descricao: 'Sei não',
-    nome_contato: 'victhor',
-    telefone: '85989715291',
-    email: 'victhor@hotmail.com'
+function clearForm(){
+    document.getElementById('input-pet-nome').value = ''
+    document.getElementById('input-pet-idade').value = ''
+    document.getElementById('input-pet-raca').value = ''
+    document.getElementById('input-pet-peso').value = ''
+    document.getElementById('input-pet-descricao').value = ''
+    document.forms['form-cadastro']['input-contato-nome'].value = ''
+    document.forms['form-cadastro']['input-contato-telefone'].value = ''
+    document.forms['form-cadastro']['input-contato-email'].value = ''
+    document.getElementById('input-pet-categoria').selectIndex = 0;
+    document.getElementById('input-pet-tamanho').selectIndex = 0;
+    document.getElementById('input-pet-image').files[0] = null
+    document.getElementById('pet-img').src='img/img-default.png';
 }
-var cad2 = {
-    nome: "toto",
-    idade: 2,
-    categoria: 'cachorro',
-    raca: 'viralata',
-    tamanho: 'medio',
-    peso: '2kg',
-    coleira: '#fff',
-    descricao: 'Sei não',
-    nome_contato: 'victhor',
-    telefone: '85989715291',
-    email: 'victhor@hotmail.com'
-}
-var cad3 = {
-    nome: "obelisco",
-    idade: 3,
-    categoria: 'gato',
-    raca: 'puddle',
-    tamanho: 'pequeno',
-    peso: '2kg',
-    coleira: '#fff',
-    descricao: 'Sei não',
-    nome_contato: 'victhor',
-    telefone: '85989715291',
-    email: 'victhor@hotmail.com'
+
+function clearPopup(){
+    document.getElementById('img-pet').src = '';
+    document.getElementsByClassName('info-pet-body')[0].innerHTML = '';
+    document.getElementsByClassName('info-contato')[0].children[1].innerHTML = '';
 }
