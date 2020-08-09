@@ -39,9 +39,10 @@ body {
 }
 
 .header-image img {
-	max-height: 100%;
+    width: 158px;
+    object-fit: cover;
+    height: 158px;
 }
-
 .header-description {
     text-align: right;
 }
@@ -100,7 +101,7 @@ form[name="form-cadastro"] button {
     margin: 30px auto 0;
 }
 
-.pet-form p, .contato-form p {
+form p, .contato-form p {
 	text-align: justify;
 	margin-bottom: 20px;
     font-family: PatuaOne;
@@ -109,7 +110,57 @@ form[name="form-cadastro"] button {
 }
 
 .petDescricao {
+	margin-top: 15px;
     margin-bottom: 34px;
+	width: 100%;
+}
+
+.petNome {
+    width: 70%;
+}
+
+.petIdade {
+    width: 30%;
+}
+
+.petCategoria {
+    width: 50%;
+}
+
+.petRaca {
+    width: 50%;
+}
+
+.petTamanho {
+    width: 50%;
+}
+
+.petPeso {
+    width: 50%;
+}
+
+.petTamanho select {
+     width: calc(100% - 115.88px);
+}
+
+.petPeso input {
+    width: calc(100% - 61px);
+}
+
+.petCategoria select {
+    width: calc(100% - 117.48px);
+}
+
+.petRaca input {
+    width: calc(100% - 61.67px);
+}
+
+.petIdade input {
+    width: calc(100% - 67.89px);
+}
+
+.petNome input {
+    width: calc(100% - 82.39px);
 }
 
 input:-webkit-autofill,
@@ -128,7 +179,7 @@ select:-webkit-autofill:focus {
 }
 
 #input-pet-descricao {
-    width: calc(100% - 118.11px) !important;
+    width: calc(100% - 98.11px) !important;
     height: 70px;
     margin: 0;
 }
@@ -145,7 +196,6 @@ select:-webkit-autofill:focus {
     font-size: 15px;
     outline-color: #5f5643;
     color: #5f5643;
-    box-sizing: initial;
     font-family: PatuaOne;
     outline-width: 1px;
     margin: 15px 5px;
@@ -155,6 +205,54 @@ select:-webkit-autofill:focus {
 	font-family: PatuaOne;
 	text-transform: uppercase;
 	color: #c8bba1;
+}
+
+.pet-form, .contato-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 740px) {
+	.pet-form, .contato-form {
+		display: block;
+	}
+	
+	.campo {
+		width: 100% !important;
+	}
+	
+	.contato-form input, .pet-form input, .pet-form select  {
+		width: 100% !important;
+		margin: 12px 0 !important;
+	}	
+		
+}
+
+.contatoNome {
+    width: 60%;
+}
+
+.contatoTelefone {
+	width: 40%;
+}
+.contatoEmail {
+    width: 100%;
+}
+
+.contatoEmail input {
+     width: calc(100% - 69.56px);
+}
+
+
+
+.contatoTelefone input {
+    width: calc(100% - 96.23px);
+}
+.contatoNome input {
+    width: calc(100% - 107.67px);
 }
 
 
