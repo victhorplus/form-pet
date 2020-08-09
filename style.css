@@ -144,7 +144,7 @@ form p, .contato-form p {
 }
 
 .petPeso input {
-    width: calc(100% - 61px);
+    width: calc(100% - 51px);
 }
 
 .petCategoria select {
@@ -152,11 +152,11 @@ form p, .contato-form p {
 }
 
 .petRaca input {
-    width: calc(100% - 61.67px);
+    width: calc(100% - 51.67px);
 }
 
 .petIdade input {
-    width: calc(100% - 67.89px);
+    width: calc(100% - 57.89px);
 }
 
 .petNome input {
@@ -188,6 +188,10 @@ select:-webkit-autofill:focus {
     float: left;
 	padding-right: 9px;
 }
+.campo {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 
 .pet-form input, .contato-form input, select, textarea {
     background: #fbe6d4;
@@ -198,7 +202,7 @@ select:-webkit-autofill:focus {
     color: #5f5643;
     font-family: PatuaOne;
     outline-width: 1px;
-    margin: 15px 5px;
+    margin: 0;
 }
 
 ::placeholder {
@@ -243,13 +247,13 @@ select:-webkit-autofill:focus {
 }
 
 .contatoEmail input {
-     width: calc(100% - 69.56px);
+     width: calc(100% - 59.56px);
 }
 
 
 
 .contatoTelefone input {
-    width: calc(100% - 96.23px);
+    width: calc(100% - 85.73px);
 }
 .contatoNome input {
     width: calc(100% - 107.67px);
@@ -350,6 +354,29 @@ footer{
 #popup.show{
     visibility: visible;
 }
+
+
+.janela {
+    margin: 0 auto;
+    background: #fff6ef;
+    width: 40%;
+	padding: 40px;
+}
+
+.janela h2{
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.janela p {
+	text-align: justify;
+    margin-top: 10px;
+    font-family: PatuaOne;
+	
+    font-size: 13px;
+    color: #5f5643;
+}
+
 
 
 
