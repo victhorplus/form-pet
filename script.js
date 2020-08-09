@@ -1,7 +1,8 @@
 var lista_pet = getStorage() || [];
+var cadastro = {};
 
-function validaFormulario(){
-    var cadastro = {
+function send(){
+    cadastro = {
         nome_pet: document.getElementById('input-pet-nome').value,
         idade_pet: document.getElementById('input-pet-idade').value,
         categoria_pet: document.getElementById('input-pet-categoria').value,
@@ -10,27 +11,31 @@ function validaFormulario(){
         peso_pet: document.getElementById('input-pet-peso').value,
         coleira_pet: document.getElementById('input-pet-coleira').value,
         descricao_pet: document.getElementById('input-pet-descricao').value,
-        image_pet: document.getElementById('pet-img').src=='img/img-default.png',
+        image_pet: document.getElementById('pet-img').src,
         nome_contato: document.forms['form-cadastro']['input-contato-nome'].value,
         telefone_contato: document.forms['form-cadastro']['input-contato-telefone'].value,
         email_contato: document.forms['form-cadastro']['input-contato-email'].value
     }
 
-    // categoria, tamanho, coleira, descricao, nome contato, telefone e email obrigatórios
+    validaDados(cadastro);
+
+    // Armazena a variável cadastro no localStorage do navegador
+    localStorage.setItem(localStorage.length, JSON.stringify(cadastro));
+}
+
+function validaDados(obj){
     if(
-        cadastro.categoria_pet === undefined ||
-        cadastro.tamanho_pet === undefined ||
-        cadastro.coleira_pet === undefined ||
-        cadastro.descricao === undefined ||
-        cadastro.nome_contato === undefined ||
-        cadastro.telefone_contato === undefined ||
-        cadastro.email_contato === undefined
+        obj.categoria_pet === undefined ||
+        obj.tamanho_pet === undefined ||
+        obj.coleira_pet === undefined ||
+        obj.descricao === undefined ||
+        obj.nome_contato === undefined ||
+        obj.telefone_contato === undefined ||
+        obj.email_contato === undefined
     ){
         erro('Dados de cadastro incompletos');
         return;
     }
-    cadastro.image_pet = cadastro.image_pet=='img/img-default.png'?'': cadastro.image_pet;
-    localStorage.setItem(localStorage.length, JSON.stringify(cadastro));
 }
 
 function getStorage(){
