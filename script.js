@@ -1,53 +1,55 @@
 var lista_pet = getStorage() || [];
-var cadastro = {};
+var pet = {};
+var contato = {};
 
 function send(){
-    cadastro = {
-        nome_pet: document.getElementById('input-pet-nome').value,
-        idade_pet: document.getElementById('input-pet-idade').value,
-        categoria_pet: document.getElementById('input-pet-categoria').value,
-        raca_pet: document.getElementById('input-pet-raca').value,
-        tamanho_pet: document.getElementById('input-pet-tamanho').value,
-        peso_pet: document.getElementById('input-pet-peso').value,
-        coleira_pet: document.getElementById('input-pet-coleira').value,
-        descricao_pet: document.getElementById('input-pet-descricao').value,
-        image_pet: document.getElementById('pet-img').src,
-        nome_contato: document.forms['form-cadastro']['input-contato-nome'].value,
-        telefone_contato: document.forms['form-cadastro']['input-contato-telefone'].value,
-        email_contato: document.forms['form-cadastro']['input-contato-email'].value
+    pet = {
+        nome: document.getElementById('input-pet-nome').value,
+        idade: document.getElementById('input-pet-idade').value,
+        categoria: document.getElementById('input-pet-categoria').value,
+        raca: document.getElementById('input-pet-raca').value,
+        tamanho: document.getElementById('input-pet-tamanho').value,
+        peso: document.getElementById('input-pet-peso').value,
+        coleira: document.getElementById('input-pet-coleira').value,
+        descricao: document.getElementById('input-pet-descricao').value,
+        imagem: document.getElementById('pet-img').src
     }
 
-    validaDados(cadastro);
+    contato = {
+        nome: document.forms['form-cadastro']['input-contato-nome'].value,
+        telefone: document.forms['form-cadastro']['input-contato-telefone'].value,
+        email: document.forms['form-cadastro']['input-contato-email'].value
+    }
+
+    if(validaDados())
+        popup();
 }
 
-function validaDados(obj){
+function validaDados(){
     if(
-        obj.categoria_pet === undefined ||
-        obj.tamanho_pet === undefined ||
-        obj.coleira_pet === undefined ||
-        obj.descricao === undefined ||
-        obj.nome_contato === undefined ||
-        obj.telefone_contato === undefined ||
-        obj.email_contato === undefined
+        pet.categoria === undefined ||
+        pet.tamanho === undefined ||
+        pet.coleira === undefined ||
+        pet.descricao === undefined ||
+        contato.nome === undefined ||
+        contato.telefone === undefined ||
+        contato.email === undefined
     ){
         erro('Dados de cadastro incompletos');
-        return;
+        return false;
     }
+    return true;
 }
 
-function getStorage(){
-    var result = []
-
-    let i = 0;
-    for(property in localStorage){
-        if(i>= localStorage.length) return result;
-        
-        let data = JSON.parse(localStorage.getItem(property));
-        result.push(data);
-        console.log(data)
-        i++;
+function popup(){
+    var ul_pet = document.createElement('ul');
+    var li_pet = []
+    for(let att in pet){
+        if(pet[att] != ''){
+            let li = document.createElement('li')
+            li_pet.push(document.createElement('li'))
+        }
     }
-    return result;
 }
 
 function erro(error){
