@@ -145,7 +145,7 @@ form p, .contato-form p {
 }
 
 .petPeso input {
-    width: calc(100% - 59.31px);
+    width: calc(100% - 51px);
 }
 
 .petCategoria select {
@@ -157,7 +157,7 @@ form p, .contato-form p {
 }
 
 .petIdade input {
-    width: calc(100% - 66.19px);
+    width: calc(100% - 57.89px);
 }
 
 .petNome input {
