@@ -401,7 +401,7 @@ footer{
 
 .janela h2{
 	text-transform: uppercase;
-	font-size: 23px;
+	font-size: 22px;
 }
 
 
@@ -415,6 +415,7 @@ footer{
     float: left;
     height: 40%;
 	margin-right: 27px;
+	background: #bfae92;
 }
 
 input#input-pet-coleira {
