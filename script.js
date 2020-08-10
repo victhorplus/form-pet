@@ -2,6 +2,7 @@ var pet = {};
 var contato = {};
 
 function send(){
+	
     pet = {
         nome: document.getElementById('input-pet-nome').value,
         idade: document.getElementById('input-pet-idade').value,
@@ -24,22 +25,20 @@ function send(){
         popup();
         clearForm();
     }
+	
+	document.getElementById("foto").style.border = "5px solid " + pet.coleira;
 }
 
 function validaDados(){
-    if(
-        (pet.categoria === undefined && pet.categoria != null && pet.categoria != '') ||
-        pet.tamanho === undefined ||
-        pet.coleira === undefined ||
-        pet.descricao === undefined ||
-        contato.nome === undefined ||
-        contato.telefone === undefined ||
-        contato.email === undefined
-    ){
+    if(pet.nome == '' || pet.descricao == '' || contato.nome == '' || contato.email == '' || contato.telefone == ''){
+
         erro('Dados de cadastro incompletos');
         return false;
     }
+	
+	else {
     return true;
+	}
 }
 
 function popup(){
@@ -105,6 +104,7 @@ function erro(error){
 function preview(){
     var file = document.getElementById('input-pet-image').files[0];
     var img = document.getElementById('pet-img');
+	
     var reader = new FileReader();
     
     if(

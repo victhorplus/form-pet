@@ -350,36 +350,82 @@ footer{
     float: right;
     top: -35px;
     left: 35px;
+	    padding: 0px;
     cursor: pointer;
 }
 
 #popup.hidden{
-    visibility: visible;
+    visibility: hidden;
 }
 
 #popup.show{
     visibility: visible;
 }
 
+.check {
+	width: 100%;
+	text-align: center;
+    margin: 0 auto;
+}
+
+.check .fa {
+	font-size: 53px !important;
+    background: #fbe6d4;
+	color: #5f5643;
+    width: auto;
+    border: 11px solid #fff6ef;
+    padding: 17px;
+	margin-top: -92px;
+}
+
+.dados li {
+    list-style: none;
+}
+
+.dados label {
+    font-size: 15px;
+}
+.dados {
+    text-align: left;
+}
 
 .janela {
-
+	text-align: center;
     margin: 0 auto;
     background: #fff6ef;
     width: 40%;
+	    height: auto;
 	padding: 40px;
 }
 
 .janela h2{
 	text-transform: uppercase;
-	font-size: 25px;
+	font-size: 23px;
+}
+
+
+.info-contato {
+    margin-top: 18px;
+}
+
+.img-pet {
+	width: 40%;
+	overflow: hidden;
+    float: left;
+    height: 40%;
+	margin-right: 27px;
+}
+
+.img-pet img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .janela p {
-	text-align: justify;
-    margin-top: 10px;
+    text-align: justify;
+    margin-bottom: 16px;
     font-family: PatuaOne;
-	
     font-size: 13px;
     color: #5f5643;
 }

@@ -130,7 +130,7 @@
             </div>
         </div>
 
-        <button type="submit">
+        <button type="submit" onclick='send()'>
             Enviar
         </button>
     </form>
@@ -139,12 +139,16 @@
 </div>
 
 <div id='popup' class='hidden'>
+	
     <div class='janela'>
+	<span class="check">
+	<i class="fa fa-check"></i></span>
         <button onclick='openClose()'>
-            X
+            <i class="fa fa-times"></i>
         </button>
-
-        <div class='img-pet'>
+	
+	<div class="dados">
+        <div class='img-pet' id="foto">
             <img id='img-pet' width='100px'>
         </div>
         <div class='info'>
@@ -160,7 +164,7 @@
                 <h2>Para mais informações</h2>
             </div>
         </div>
-    </div>
+    </div></div>
 </div>
 
 <footer>
