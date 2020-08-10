@@ -154,5 +154,5 @@ function clearForm(){
 function clearPopup(){
     document.getElementById('img-pet').src = '';
     document.getElementsByClassName('info-pet-body')[0].innerHTML = '';
-    document.getElementsByClassName('info-contato')[0].children[1].innerHTML = '';
+    document.getElementsByClassName('info-contato')[0].innerHTML = '';
 }

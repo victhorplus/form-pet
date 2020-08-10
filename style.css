@@ -380,6 +380,7 @@ footer{
 
 .dados li {
     list-style: none;
+	text-align: justify;
 }
 
 .dados label {
@@ -414,6 +415,10 @@ footer{
     float: left;
     height: 40%;
 	margin-right: 27px;
+}
+
+input#input-pet-coleira {
+    box-sizing: content-box;
 }
 
 .img-pet img {
