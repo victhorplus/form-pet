@@ -145,7 +145,7 @@ form p, .contato-form p {
 }
 
 .petPeso input {
-    width: calc(100% - 51px);
+    width: calc(100% - 59.31px);
 }
 
 .petCategoria select {
@@ -157,7 +157,7 @@ form p, .contato-form p {
 }
 
 .petIdade input {
-    width: calc(100% - 57.89px);
+    width: calc(100% - 66.19px);
 }
 
 .petNome input {
@@ -180,7 +180,7 @@ select:-webkit-autofill:focus {
 }
 
 #input-pet-descricao {
-    width: calc(100% - 98.11px) !important;
+    width: calc(100% - 106.41px) !important;
     height: 70px;
     margin: 0;
 }
@@ -250,13 +250,13 @@ select:-webkit-autofill:focus {
 }
 
 .contatoEmail input {
-     width: calc(100% - 59.56px);
+     width: calc(100% - 76.28px);
 }
 
 
 
 .contatoTelefone input {
-    width: calc(100% - 85.73px);
+    width: calc(100% - 94.25px);
 }
 .contatoNome input {
     width: calc(100% - 107.67px);
@@ -404,6 +404,13 @@ footer{
 	font-size: 22px;
 }
 
+h2.info {
+    margin-top: 22px;
+}
+
+.info-pet-body {
+    height: 190px;
+}
 
 .info-contato {
     margin-top: 18px;
