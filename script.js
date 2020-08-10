@@ -5,11 +5,11 @@ function send(){
 	
     pet = {
         nome: document.getElementById('input-pet-nome').value,
-        idade: document.getElementById('input-pet-idade').value + " anos",
+        idade: document.getElementById('input-pet-idade').value,
         categoria: document.getElementById('input-pet-categoria').value,
         raca: document.getElementById('input-pet-raca').value,
         tamanho: document.getElementById('input-pet-tamanho').value,
-        peso: document.getElementById('input-pet-peso').value + " kg",
+        peso: document.getElementById('input-pet-peso').value,
         coleira: document.getElementById('input-pet-coleira').value,
         descricao: document.getElementById('input-pet-descricao').value,
         imagem: document.getElementById('pet-img').src
@@ -30,7 +30,7 @@ function send(){
 }
 
 function validaDados(){
-    if(pet.nome == '' || pet.descricao == '' || pet.idade == " anos" || pet.peso == " kg" || contato.nome == '' || contato.email == '' || contato.telefone == ''){
+    if(pet.nome == '' || pet.descricao == '' || contato.nome == '' || contato.email == '' || contato.telefone == ''){
 
         erro('Dados de cadastro incompletos');
         return false;
