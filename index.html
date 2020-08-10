@@ -55,6 +55,7 @@
 
         
     <form name='form-cadastro'>
+	
 			<h2>SOBRE O PET</h2>
     <form name='form-cadastro' onsubmit="send(); return false;" >
         <div class='pet-form'>
@@ -121,12 +122,12 @@
 
             <div class='campo contatoTelefone'>
                 <label for="input-contato-telefone">*Telefone: </label>
-                <input type="number" id='input-contato-telefone' required name='input-contato-telefone' placeholder="(85) 9 9999-9999">
+                <input type="text"  id="input-contato-telefone" maxlength="15" required name='input-contato-telefone' placeholder="(85) 9 9999-9999">
             </div>
 
             <div class='campo contatoEmail'>
                 <label for="input-contato-email">*E-mail: </label>
-                <input type="mail" id='input-contato-email' required name='input-contato-email' placeholder="example@example.com">
+                <input type="email" id='input-contato-email' required name='input-contato-email' placeholder="example@example.com">
             </div>
         </div>
 
@@ -137,6 +138,7 @@
 </div>
 
 </div>
+
 
 <div id='popup' class='hidden'>
 	

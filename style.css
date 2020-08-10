@@ -242,6 +242,13 @@ select:-webkit-autofill:focus {
     width: 60%;
 }
 
+li > span {
+    font-family: helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: justify;
+}
+
 .contatoTelefone {
 	width: 40%;
 }
