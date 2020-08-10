@@ -156,7 +156,7 @@ function clearForm(){
     document.forms['form-cadastro']['input-contato-email'].value = ''
     document.getElementById('input-pet-categoria').selectIndex = 0;
     document.getElementById('input-pet-tamanho').selectIndex = 0;
-    document.getElementById('input-pet-image').files[0] = null
+    document.getElementById('input-pet-image').value = '';
     document.getElementById('pet-img').src='img/img-default.png';
 }
 
