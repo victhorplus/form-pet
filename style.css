@@ -79,6 +79,30 @@ button {
     color: #5f5643;
 }
 
+.corColeira {
+	width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+	
+	
+}
+
+.corColeira label, .corColeira input {
+    margin-right: 8px !important;
+}
+
+.corColeira input {
+	margin-bottom: 8px !important;
+	
+}
+
+
+.corColeira p {
+    margin: 0;
+}
+
 h2 {
     font-family: PatuaOne;
     font-size: 30px;
@@ -89,7 +113,8 @@ h2 {
     font-family: PatuaOne;
     font-size: 30px;
     color: #5f5643;
-	margin-bottom: 21px;
+	margin-top: 25px;
+	text-transform: uppercase;
 }
 
 label {
