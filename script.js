@@ -49,6 +49,7 @@ function popup(){
 
     // Laço para preenchimento dos dados de cadastro do PET no popup
     for(let att in pet){
+		
         // Cria LI com propriedades que contém valor e ignora o resto
         if(pet[att] != '' && att !='imagem'){
             // Formatando para <label class='prop'>Propriedade: </label> <span>valor</span>
@@ -62,6 +63,14 @@ function popup(){
             li.appendChild(label);
             li.appendChild(span);
             li_pet.push(li);
+			
+			if(att == 'raca'){
+				label.innerHTML = "Raça: ";
+			}
+			
+			if(att == 'descricao'){
+				label.innerHTML = "Descrição: ";
+			}
         }
     }
     for(let li of li_pet){
